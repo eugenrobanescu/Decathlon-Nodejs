@@ -5,10 +5,12 @@ const router = express.Router();
 
 // router.param('id', tourController.checkID);
 
-router.route("/").get(athleteController.getAthletes);
+router.route("/getAthletes").get(athleteController.getAthletes);
+router.route("/getTests").get(athleteController.getTests);
+
 // router
 //   .route("/:id")
-//   .get(athleteController.getTour)
+//   .get(athleteController.getA)
 //   .patch(athleteController.updateTour)
 //   .delete(athleteController.deleteTour);
 
