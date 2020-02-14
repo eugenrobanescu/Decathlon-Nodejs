@@ -10,10 +10,10 @@ exports.athletes = (temp, el) => {
 };
 exports.tests = (temp, el) => {
   let outPut = temp.replace(/{%NAME%}/g, el.name);
+  outPut = outPut.replace(/{%RP%}/g, el.recordPerson);
+  outPut = outPut.replace(/{%RR%}/g, el.recordResult);
+  outPut = outPut.replace(/{%RD%}/g, el.recordDate);
   outPut = outPut.replace(/{%DESCRIPTION%}/g, el.description);
-  outPut = outPut.replace(/{%RECORDRESULT%}/g, el.recordResult);
-  outPut = outPut.replace(/{%RECORDDATE%}/g, el.recordDate);
-  outPut = outPut.replace(/{%RECORDPERSON%}/g, el.recordPerson);
 
   return outPut;
 };

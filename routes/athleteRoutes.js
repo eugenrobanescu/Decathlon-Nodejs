@@ -3,15 +3,7 @@ const athleteController = require("./../controllers/athleteController");
 
 const router = express.Router();
 
-// router.param('id', tourController.checkID);
-
-router.route("/getAthletes").get(athleteController.getAthletes);
-router.route("/getTests").get(athleteController.getTests);
-
-// router
-//   .route("/:id")
-//   .get(athleteController.getA)
-//   .patch(athleteController.updateTour)
-//   .delete(athleteController.deleteTour);
+router.route("/getathletes").get(athleteController.getAthletes);
+router.route("/gettests").get(athleteController.getTests);
 
 module.exports = router;

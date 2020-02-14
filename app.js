@@ -6,4 +6,6 @@ const athelteRouter = require("./routes/athleteRoutes");
 ////// route
 
 app.use("/", athelteRouter);
+app.use("/", express.static("public"));
+app.use("/getTests", express.static("public"));
 module.exports = app;

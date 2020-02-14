@@ -1,7 +1,16 @@
-<tr>
-  <td>{%NAME%}</td>
-  <td>{%DESCRIPTION%}</td>
-  <td>{%RECORDRESULT%}</td>
-  <td>{%RECORDDATE%}</td>
-  <td>{%RECORDPERSON%}</td>
-</tr>
+<div class="cardsContainer">
+  <div class="card">
+    <div class="name"><h1>{%NAME%}</h1></div>
+    <div class="record">
+      <span><i class="far fa-grin-alt"></i>Record Person:{%RP%}</span>
+      <span><i class="fas fa-flag-checkered"></i>Record Result:{%RR%}</span>
+      <span><i class="far fa-calendar-alt"></i>Record Date:{%RD%}</span>
+    </div>
+    <div class="description">
+      <h2>Description</h2>
+      <p>
+        {%DESCRIPTION%}
+      </p>
+    </div>
+  </div>
+</div>

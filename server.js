@@ -1,7 +1,4 @@
-const mysql = require("mysql");
 const app = require("./app");
-
-//Create connection
 
 const port = 3000;
 app.listen(port, () => {

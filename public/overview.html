@@ -9,7 +9,14 @@
       href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Athletes</title>
   </head>
   <body>
     <div id="header">
@@ -29,25 +36,14 @@
       <div class="leftSideContainer">
         <div class="vertical-menu">
           <a href="#" class="active">Home</a>
-          <a href="#">Athletes</a>
-          <a href="#">Tests</a>
+          <a href="http://localhost:3000/getathletes">Athletes</a>
+          <a href="http://localhost:3000/getTests/">Tests</a>
           <a href="#">Results</a>
           <a href="#">Performance</a>
         </div>
       </div>
       <div class="rightSideContainer">
-        <table class="dataTable">
-          <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Test</th>
-            <th>Result1</th>
-            <th>Result2</th>
-            <th>Result3</th>
-          </tr>
-
-          {%ATHLETESDATA%}
-        </table>
+        {%DATA%}
       </div>
     </div>
   </body>
