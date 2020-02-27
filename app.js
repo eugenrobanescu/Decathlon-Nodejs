@@ -7,5 +7,8 @@ const athelteRouter = require("./routes/athleteRoutes");
 
 app.use("/", athelteRouter);
 app.use("/", express.static("public"));
+app.use("/getathletes", express.static("public"));
 app.use("/getTests", express.static("public"));
+app.use("/getPerformance", express.static("public"));
+// app.use(express.static("main"));
 module.exports = app;

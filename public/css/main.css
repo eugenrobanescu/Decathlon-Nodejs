@@ -35,6 +35,9 @@ body {
   display: flex;
 }
 .leftSideContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   background: #444;
   height: 100%;
   width: 15%;
@@ -66,7 +69,28 @@ body {
   background-color: #4caf50; /* Add a green color to the "active/current" link */
   color: white;
 }
+/* FORM ATHLETE */
+#formEvent {
+  margin-top: 100px;
 
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+#formEvent select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#formEvent label {
+  font-size: 25px;
+  padding: 10px;
+}
 /* TABLE FOR ATHLETES */
 #tableContainer {
   width: 80%;
@@ -82,7 +106,7 @@ body {
 
 .dataTable td {
   border: 2px solid white;
-  padding: 8px;
+  padding: 18px;
 }
 
 .dataTable tr:nth-child(even) {
@@ -98,11 +122,11 @@ body {
 
 .dataTable th {
   text-align: center;
-  padding: 8px;
-  border-radius: 20px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 28px;
 
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
   background-color: #4caf50;
   color: white;
 }
@@ -124,6 +148,9 @@ body {
   min-width: 350px;
   height: 700px;
   background: white;
+}
+.card h1 {
+  font-size: 20px;
 }
 
 .name {
@@ -161,4 +188,53 @@ body {
   line-height: 1.6;
   width: 95%;
   margin: 0 auto;
+}
+
+/* CHART */
+.chartContainer {
+  width: 600px;
+  height: 600px;
+}
+.containerForForm {
+  background-color: white;
+  width: 95%;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  padding: 50px 0 50px 0;
+  justify-content: center;
+  justify-content: space-around;
+}
+#formChart {
+  width: 30%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+#formChart select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#formChart label {
+  font-size: 25px;
+  padding: 10px;
+}
+button[type="submit"] {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  background-color: #45a049;
 }

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/welcome.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+      crossorigin="anonymous"
+    ></script>
+
+    <title>DECATHLON</title>
+  </head>
+  <body>
+    <div id="header">
+      <div id="titleContainer">
+        <img
+          width="130"
+          height="60"
+          id="logo"
+          src="./img/logo-white.png"
+          alt=""
+        />
+        <h1 id="title">DECATHLON</h1>
+      </div>
+      <!-- <div id="logoContainer"></div> -->
+    </div>
+    <div id="container">
+      <div class="leftSideContainer">
+        <div class="vertical-menu">
+          <a href="http://localhost:3000/" class="active">WELCOME</a>
+          <a href="http://localhost:3000/getathletes">Athletes</a>
+          <a href="http://localhost:3000/getTests/">Events</a>
+          <a href="http://localhost:3000/getPerformance/">Performance</a>
+        </div>
+      </div>
+      <div class="rightSideContainer">
+        <div class="environment">
+          <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 5</div>
+              <img src="./img/athlete-671209_960_720.jpg" width="100%" height="100%">
+              <div class="text">Long Jump</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 5</div>
+              <img src="./img/athletics-651132_960_720.jpg" width="100%" height="100%">
+              <div class="text">Pole Jump</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 5</div>
+              <img src="./img/relay-race-655353_960_720.webp" width="100%" height="100%">
+              <div class="text">Running</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 5</div>
+              <img src="./img/shot-putter-558158_960_720.jpg" width="100%" height="100%">
+              <div class="text">Shot Put</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">5 / 5</div>
+              <img src="./img/swimmers-79592_960_720.webp"width="100%" height="100%" >
+              <div class="text">Swimming</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+            
+          <div id="textDecathlon">
+ <h1>DECATHLON</h1>
+ <p>
+  The decathlon is a combined event in athletics consisting of ten track and field events. 
+   Events are held over two consecutive days 
+  and the winners are determined by the combined performance in all. Performance is judged on a points system in 
+  each event, not by the position achieved. The decathlon is contested mainly by male athletes, while female 
+  athletes typically compete in the heptathlon.
+  Traditionally, the title of "World's Greatest Athlete" has been given to the person who wins the decathlon, thus 
+  the world's greatest athlete of all times is the record-man of decathlon (Kevin Mayer as of September 2018). This
+   began when King Gustav V of Sweden told Jim Thorpe, "You, sir, are the world's greatest athlete" after Thorpe won
+    the decathlon at the Stockholm Olympics in 1912.
+  The event is similar to the pentathlon held at the ancient Greek Olympics, and also similar to a competition
+   called an "all-around", which was contested at the United States amateur championships in 1884. Another 
+   all-around was held at the 1904 Summer Olympics. The modern decathlon first appeared at the 1912 Games.
+  The current official decathlon world record holder is French Kevin Mayer, who scored a total of 9,126 points at 
+  the 2018 Décastar in France.
+</p>
+          </div>
+           </div>
+    </div>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+       
+      }
+     
+      </script>
+  </body>
+</html>

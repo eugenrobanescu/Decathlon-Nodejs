@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+
     <link
       href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap"
       rel="stylesheet"
@@ -16,7 +16,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <title>Athletes</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+      crossorigin="anonymous"
+    ></script>
+
+    <title>DECATHLON</title>
   </head>
   <body>
     <div id="header">
@@ -28,19 +35,20 @@
           src="./img/logo-white.png"
           alt=""
         />
-        <h1 id="title">TITLE FOR SITE</h1>
+        <h1 id="title">DECATHLON</h1>
       </div>
       <!-- <div id="logoContainer"></div> -->
     </div>
     <div id="container">
       <div class="leftSideContainer">
         <div class="vertical-menu">
-          <a href="#" class="active">Home</a>
+          <a href="http://localhost:3000/" class="active">WELCOME</a>
           <a href="http://localhost:3000/getathletes">Athletes</a>
-          <a href="http://localhost:3000/getTests/">Tests</a>
-          <a href="#">Results</a>
-          <a href="#">Performance</a>
+          <a href="http://localhost:3000/getTests/">Events</a>
+          <a href="http://localhost:3000/getPerformance/">Performance</a>
         </div>
+
+        {%FORMATHLETE%}
       </div>
       <div class="rightSideContainer">
         {%DATA%}
