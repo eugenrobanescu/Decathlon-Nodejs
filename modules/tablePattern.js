@@ -35,8 +35,9 @@ exports.cardTests = `<div class="cardsContainer">
 exports.chartScript = `<script>var ctx = document.getElementById("myChart").getContext("2d");
 var myChart = new Chart(ctx, {
   type: "bar",
+  
   data: {
-    labels: ["Result1", "Result2", "Result3"],
+    labels: ["2020-01-14", "2020-01-15", "2020-01-16"],
     datasets: [
       {
         label: "{%LABEL%}",
@@ -74,6 +75,9 @@ var myChart = new Chart(ctx, {
       yAxes: [
         {
           ticks: {
+            callback: function(value, index, values) {
+              return  value + ' {%LABEL%}';
+          },
             beginAtZero: true
             
           }

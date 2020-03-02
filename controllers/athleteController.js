@@ -41,11 +41,12 @@ exports.getAthletes = (req, res) => {
     );
 
     let outputFinal = tempOverview.replace(/{%DATA%}/g, outputDemo);
-    outputFinal += tablePattern.formEvent.replace(/{%EV%}/g, selection);
+
     outputFinal = outputFinal.replace(
       /{%FORMATHLETE%}/g,
       tablePattern.formEvent
     );
+    outputFinal = outputFinal.replace(/{%EV%}/g, selection);
     res.send(outputFinal);
   });
 };
